@@ -1,0 +1,21 @@
+cmake_minimum_required (VERSION 3.13)
+
+# 设置项目名字
+project(questionsDemo LANGUAGES CXX)
+
+# set(PROJECT_SOURCE_DIR "./")
+set(PROJECT_DIR "../")
+
+# 添加c++11标准
+set(CMAKE_CXX_STANDARD 11)
+# 显式要求指明支持C++标准
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# include头文件
+include_directories(${PROJECT_DIR}/include)
+
+# 添加源代码文件
+aux_source_directory(./ DIR_SRC)
+
+# 生成可执行文件
+add_executable(${PROJECT_NAME} ${DIR_SRC})
