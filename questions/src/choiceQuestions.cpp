@@ -1,4 +1,4 @@
-#include "choiceQuestions.h"
+#include "../include/choiceQuestions.h"
 
 /*
 构造函数
@@ -29,9 +29,10 @@ string choiceQuestions::getAnswer() {
 
 /// @brief how many points you can get in this question.
 int choiceQuestions::yourScore() {
+    //注意：this->answer是strnig类型，而this->your_answer是vector<string>类型
     if (this->answer.empty() || this->your_answer.empty())
         return 0;
-    else if (this->answer == this->your_answer)
+    else if (this->answer == this->your_answer[0])
         return this->score;
 }
 

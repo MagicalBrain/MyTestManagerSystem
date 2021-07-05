@@ -1,4 +1,4 @@
-#include "questions.h"
+#include "../include/questions.h"
 
 int questions::getID() {
     return this->id;
@@ -29,9 +29,10 @@ bool questions::getAnalysis() {
 }
 
 int questions::yourScore() {
+    //注意：this->answer是strnig类型，而this->your_answer是vector<string>类型
     if (this->your_answer.empty())
         return 0;
-    else if ( this->answer == this->your_answer)
+    else if (this->answer == this->your_answer[0])
         return this->score;
 }
 
