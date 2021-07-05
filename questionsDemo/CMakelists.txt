@@ -3,6 +3,11 @@ cmake_minimum_required (VERSION 3.13)
 # 设置项目名字
 project(questionsDemo LANGUAGES CXX)
 
+# 如果没有设置cmake安装路径，则设置
+if (NOT CMAKE_INSTALL_PREFIX)
+    set(CMAKE_INSTALL_PREFIX /usr/local)
+endif ()
+
 # set(PROJECT_SOURCE_DIR "./")
 set(PROJECT_DIR "../")
 

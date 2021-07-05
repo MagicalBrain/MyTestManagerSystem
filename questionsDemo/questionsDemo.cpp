@@ -1,5 +1,6 @@
 //#include "questions.h"
-#include "choiceQuestions.h"
+//#include "../questions/include/choiceQuestions.h"
+#include <choiceQuestions.h>
 
 int main() {
     choiceQuestions q1;
