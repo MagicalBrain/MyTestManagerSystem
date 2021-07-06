@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -dynamiclib -Wl,-headerpad_max_install_names -o libQuestions.dylib -install_name @rpath/libQuestions.dylib CMakeFiles/Questions.dir/src/choiceQuestions.cpp.o CMakeFiles/Questions.dir/src/questions.cpp.o 

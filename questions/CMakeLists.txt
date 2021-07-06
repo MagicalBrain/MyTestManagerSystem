@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.13)
 
 # 设置项目名字
-project(questions LANGUAGES CXX)
+project(Questions LANGUAGES CXX)
 
 # 如果没有设置cmake安装路径，则设置
 if (NOT CMAKE_INSTALL_PREFIX)
@@ -23,10 +23,13 @@ include_directories(${PROJECT_DIR}/include )
 aux_source_directory(${PROJECT_DIR}/src  PROJECT_SOURCE_DIR)
 
 # 生成可执行文件
-# add_executable(${PROJECT_NAME}  ${PROJECT_SOURCE_DIR} ${DIR_SRC})
+# add_executable(${PROJECT_NAME}.o  ${PROJECT_SOURCE_DIR})
 
 # 生成动态库.so文件
-ADD_LIBRARY(${PROJECT_NAME} SHARED  ${PROJECT_SOURCE_DIR})
+add_library(${PROJECT_NAME} SHARED  ${PROJECT_SOURCE_DIR})
+
+# target_include_directories(${PROJECT_NAME} 
+#    ${PROJECT_SOURCE_DIR})
 
 # install
 install(TARGETS ${PROJECT_NAME} 

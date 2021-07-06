@@ -1,0 +1,3 @@
+/Users/hrl/Desktop/MyTestManagerSystem/questionsDemo/build/CMakeFiles/rebuild_cache.dir
+/Users/hrl/Desktop/MyTestManagerSystem/questionsDemo/build/CMakeFiles/edit_cache.dir
+/Users/hrl/Desktop/MyTestManagerSystem/questionsDemo/build/CMakeFiles/questionsDemo.dir

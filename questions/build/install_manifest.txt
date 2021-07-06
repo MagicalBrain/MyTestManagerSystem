@@ -1,0 +1,4 @@
+/usr/local/lib/libQuestions.dylib
+/usr/local/include/Questions/questions.h
+/usr/local/include/Questions/gapfillingQuestions.h
+/usr/local/include/Questions/choiceQuestions.h

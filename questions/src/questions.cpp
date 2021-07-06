@@ -1,5 +1,19 @@
 #include "../include/questions.h"
 
+/*
+构造函数
+*/
+questions::questions(/* args */) {
+    
+}
+
+/*
+析构函数
+*/
+questions::~questions() {
+
+}
+
 int questions::getID() {
     return this->id;
 }
