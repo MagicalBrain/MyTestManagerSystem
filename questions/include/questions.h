@@ -51,8 +51,11 @@ public:
     /// @brief how many points you can get in this question. 算分的。
     virtual int yourScore() = 0;
 
-    /// @brief read your answer. 读入答案和过程的（如果有过程的话）
+    /// @brief write down your answer. 读入答案和过程的（如果有过程的话）
     virtual bool writeyourAnswer() = 0;
+
+    /// @brief read your answer. 读取答案和过程的（如果有过程的话）
+    virtual bool readyourAnswer() = 0;
 };
 
 

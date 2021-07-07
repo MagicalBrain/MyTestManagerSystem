@@ -23,7 +23,7 @@ int questions::getScore() {
 }
 
 bool questions::getDescription() {
-    if (this->analysis.empty())
+    if (this->description.empty())
         return false;
     for (auto i : this->description)
         cout << i << endl;
@@ -60,5 +60,13 @@ bool questions::writeyourAnswer() {
     if (ans.empty())
         return false;
     this->your_answer = ans;
+    return true;
+}
+
+bool questions::readyourAnswer() {
+    if (this->your_answer.empty())
+        return false;
+    for (auto i : this->your_answer) 
+        cout << i << endl;
     return true;
 }
