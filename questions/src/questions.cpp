@@ -14,12 +14,41 @@ questions::~questions() {
 
 }
 
+//因为题号id和题目分值score都是一样的设置和修改，所以不用写成虚函数
+void questions::setID(int id) {
+    this->id = id;
+}
+
 int questions::getID() {
     return this->id;
 }
 
+void questions::setScore(int score) {
+    this->score = score;
+}
+
 int questions::getScore() {
     return this->score;
+}
+
+void questions::setDescription() {
+    string str;
+    vector<string> des;
+    cout << "输入题目的描述，按EOF结束：" << endl;
+    while (cin >> str)
+    {
+        if (str == "q" || str == "quit") {
+            cout << "quit!" << endl;
+            break;
+        }
+                    
+        des.push_back(str);
+    }
+    this->description = des;
+}
+
+void questions::setDescription(vector<string> description) {
+    this->description = description;
 }
 
 bool questions::getDescription() {
@@ -32,6 +61,12 @@ bool questions::getDescription() {
 
 string questions::getAnswer() {
     return this->answer;
+}
+
+void questions::setAnalysis(vector<string> analysis) {
+    string str;
+    while (cin >> str) 
+        analysis.push_back(str);
 }
 
 bool questions::getAnalysis() {

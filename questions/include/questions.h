@@ -35,11 +35,18 @@ public:
     /// @brief get the number of this question.
     int getID();
 
+    /// @brief set the full score of this question.
     void setScore(int score);
+
     /// @brief get the full score of this question.
     int getScore();
 
+    /// @brief set the Descriptions of this question.
+    void setDescription();
+    /// @brief set the Descriptions of this question.
     void setDescription(vector<string> description);
+
+    /// @brief get the descriptions of this question.
     bool getDescription();
 
     void setAnalysis(vector<string> analysis);

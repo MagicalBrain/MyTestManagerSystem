@@ -6,13 +6,24 @@
 int main() {
     choiceQuestions q1;
 
-    char c;
+    char c = 0;
     int stop_Flag = 0;
 
     do
     {
         cout << "测试choiceQuestions：" << endl;
-        cout << "测试choiceQuestions：" << endl;
+        cout << "1 ----- 设定题目编号：" << endl;
+        cout << "2 ----- 设定该题满分为：" << endl;
+        cout << "3 ----- 设定正确答案：：" << endl;
+        cout << "4 ----- 设定选项的个数：" << endl;
+        cout << "5 ----- 输入题目的描述，按EOF结束：" << endl;
+        cout << "6 ----- 写下你的答案：" << endl;
+        cout << "q ----- 退出程序" << endl;
+
+        cin >> c;
+        string ans;
+        
+        
         switch (c)
         {
             case '1':
@@ -31,7 +42,6 @@ int main() {
                 cout << q1.getScore() << endl;
                 break;
             case '3':
-                string ans;
                 cout << "设定正确答案：" << endl;
                 cin >> ans;
                 q1.setAnswer(ans);
@@ -45,16 +55,7 @@ int main() {
                 cout << q1.get_ChoiceNum() << endl;
                 break;
             case '5':
-                string str;
-                vector<string> des;
-
-                cout << "输入题目的描述，按EOF结束：" << endl;
-                while (cin >> str)
-                {
-                    des.push_back(str);
-                }
-                
-                q1.setDescription(des);
+                q1.setDescription();
                 q1.getDescription();
                 break;
             case '6':
@@ -62,11 +63,14 @@ int main() {
                 q1.writeyourAnswer();
                 q1.readyourAnswer();
                 break;
+            case 'q':
             default:
+            stop_Flag = 1;
                 break;
         }
-    } while (stop_Flag == 1);
+    } while (stop_Flag != 1);
     
+    cout << "程序退出！" << endl;
     return 0;
 }
 
