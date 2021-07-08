@@ -58,7 +58,11 @@ bool choiceQuestions::writeyourAnswer() {
 //读取你的答案
 bool choiceQuestions::readyourAnswer() {
     //To-Do
-    return false;
+    if (this->your_answer.empty())
+        return false;
+    for (auto i : this->your_answer) 
+        cout << i << endl;
+    return true;
 }
 
 //设置选项的数量

@@ -60,6 +60,7 @@ int main() {
             case '6':
                 cout << "写下你的答案：" << endl;
                 q1.writeyourAnswer();
+                q1.readyourAnswer();
                 break;
             default:
                 break;
