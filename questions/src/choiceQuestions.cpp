@@ -70,16 +70,17 @@ void choiceQuestions::set_ChoiceNum(int num) {
     this->choice_num = num;
 }
 
-/// @brief get choice in this questions. 获取选项的。
+/// @brief get choice in this questions. 获取选项的个数。
 int choiceQuestions::get_ChoiceNum() {
     return this->choice_num;
 }
 
-//设置选项
+//设置各个选项的内容
 void choiceQuestions::setChoice() {
     vector<string> choice_;
     if (this->choice_num == 0) {
         int num;
+        cout << "请输入选项的个数：" << endl;
         cin >> num;
         this->set_ChoiceNum(num);
     }
@@ -101,4 +102,13 @@ bool choiceQuestions::setChoice(vector<string> choice_) {
         this->choice = choice_;
         return true;
     }
+}
+
+// 获取选项内容
+bool choiceQuestions::getChoice() {
+    if (this->choice_num < 1 || this->choice.empty())
+        return false;
+    for (auto i : this->choice)
+        cout << i << endl;
+    return true;
 }

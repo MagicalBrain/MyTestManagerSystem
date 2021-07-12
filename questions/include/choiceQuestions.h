@@ -42,6 +42,9 @@ public:
 
     /// @brief 设置选项，重载函数
     bool setChoice(vector<string> choice_);
+
+    /// @brief 获取选项内容
+    bool getChoice();
 };
 
 

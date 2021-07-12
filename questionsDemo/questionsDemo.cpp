@@ -18,6 +18,7 @@ int main() {
         cout << "4 ----- 设定选项的个数：" << endl;
         cout << "5 ----- 输入题目的描述，按EOF结束：" << endl;
         cout << "6 ----- 写下你的答案：" << endl;
+        cout << "7 ----- 输入各个选项的内容：" << endl;
         cout << "q ----- 退出程序" << endl;
 
         cin >> c;
@@ -55,6 +56,7 @@ int main() {
                 cout << q1.get_ChoiceNum() << endl;
                 break;
             case '5':
+                cout << "输入题干：" << endl;
                 q1.setDescription();
                 q1.getDescription();
                 break;
@@ -62,6 +64,15 @@ int main() {
                 cout << "写下你的答案：" << endl;
                 q1.writeyourAnswer();
                 q1.readyourAnswer();
+                break;
+            case '7':
+                cout << "输入各个选项的具体内容：" << endl;
+                q1.setChoice();
+                q1.getChoice();
+                break;
+            case '8':
+                cout << "计算该题得分：" << endl;
+                cout << "这题你的得分为：" << q1.yourScore() << endl;
                 break;
             case 'q':
             default:
