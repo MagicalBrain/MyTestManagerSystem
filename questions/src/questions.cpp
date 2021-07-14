@@ -77,7 +77,7 @@ bool questions::getAnalysis() {
     return true;
 }
 
-bool questions::yourScore() {
+int questions::yourScore() {
     //注意：this->answer是strnig类型，而this->your_answer是vector<string>类型
     if (this->your_answer.empty() || this->answer.empty())
         return false;

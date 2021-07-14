@@ -43,14 +43,19 @@ int choiceQuestions::yourScore() {
         return 0;
     else if (this->answer == this->your_answer[0])
         return this->score;
+    else
+        return 0;
 }
 
 //写下你的答案
 bool choiceQuestions::writeyourAnswer() {
+    //可能会出现非法输入的情况，但我希望这个问题能够通过以后的UI设计那块来解决，用代码不够方便
     string ans;
     cin >> ans;
     if (ans.empty())
         return false;
+    if (this->your_answer.empty() == false)
+        this->your_answer.pop_back();
     this->your_answer.push_back(ans);
     return true;
 }

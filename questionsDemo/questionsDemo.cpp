@@ -19,6 +19,7 @@ int main() {
         cout << "5 ----- 输入题目的描述，按EOF结束：" << endl;
         cout << "6 ----- 写下你的答案：" << endl;
         cout << "7 ----- 输入各个选项的内容：" << endl;
+        cout << "8 ----- 计算该题的得分：" << endl;
         cout << "q ----- 退出程序" << endl;
 
         cin >> c;
