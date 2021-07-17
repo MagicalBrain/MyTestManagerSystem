@@ -39,6 +39,7 @@ string choiceQuestions::getAnswer() {
 /// @brief how many points you can get in this question.
 int choiceQuestions::yourScore() {
     //注意：this->answer是string类型，而this->your_answer是vector<string>类型
+    cout << "choiceQuestions" << endl;
     if (this->answer.empty() || this->your_answer.empty())
         return 0;
     else if (this->answer == this->your_answer[0])
