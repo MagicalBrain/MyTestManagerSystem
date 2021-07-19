@@ -2,9 +2,11 @@
 //#include "../questions/include/choiceQuestions.h"
 //#include <choiceQuestions.h>
 #include <Questions/choiceQuestions.h>
+#include <Questions/gapfillingQuestions.h>
 
 int main() {
     choiceQuestions q1;
+    gapfillingQuestions q2;
 
     char c = 0;
     int stop_Flag = 0;
@@ -74,6 +76,7 @@ int main() {
             case '8':
                 cout << "计算该题得分：" << endl;
                 cout << "这题你的得分为：" << q1.yourScore() << endl;
+                cout << q2.yourScore() << endl;
                 break;
             case 'q':
             default:

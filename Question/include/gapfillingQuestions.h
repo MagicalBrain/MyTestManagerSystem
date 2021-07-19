@@ -23,27 +23,23 @@ public:
     gapfillingQuestions(/* args */);
     ~gapfillingQuestions();
 
-    virtual void setID(int id) override;
-    /// @brief get the number of this question.
-    virtual int getID() override;
-
-    virtual void setScore(int score) override;
-    /// @brief get the full score of this question.
-    virtual int getScore() override;
-
-    virtual void setDescription(vector<string> description) override;
-    virtual bool getDescription() override;
-
+    /// @brief 设置问题的正确选项
     virtual void setAnswer(string answer) override;
+
+    /// @brief 获取问题的正确选项
     virtual string getAnswer() override;
 
-    virtual void setAnalysis(vector<string> analysis) override;
-    virtual bool getAnalysis() override;
-
     /// @brief how many points you can get in this question.
+    /// @brief 该提得到的分数
     virtual int yourScore() override;
 
+    /// @brief 输入答案
     virtual bool writeyourAnswer() override;
+
+    /// @brief 输出答案
+    virtual bool readyourAnswer() override;
+
+   
 };
 
 
