@@ -1,8 +1,8 @@
 //#include "questions.h"
 //#include "../questions/include/choiceQuestions.h"
 //#include <choiceQuestions.h>
-#include <Questions/choiceQuestions.h>
-#include <Questions/gapfillingQuestions.h>
+#include "../Questions/include/choiceQuestions.h"
+#include "../Questions/include/gapfillingQuestions.h"
 
 int main() {
     choiceQuestions q1;

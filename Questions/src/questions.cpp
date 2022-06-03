@@ -88,13 +88,14 @@ int questions::yourScore() {
     }
 }
 
+/*
 bool questions::writeyourAnswer() {
     string str;
     vector<string> ans;
     while (cin >> str)
         if (!str.empty())
             ans.push_back(str);
-    
+
     if (ans.empty())
         return false;
     this->your_answer = ans;
@@ -104,7 +105,10 @@ bool questions::writeyourAnswer() {
 bool questions::readyourAnswer() {
     if (this->your_answer.empty())
         return false;
-    for (auto i : this->your_answer) 
+    for (auto i : this->your_answer)
         cout << i << endl;
     return true;
 }
+*/
+
+
